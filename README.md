@@ -15,12 +15,6 @@ Site portfolio statique minimal, moderne et responsive. Contient une page d'accu
 - Les styles sont centralisés dans `styles.css`. Les variables CSS en début de fichier permettent d'ajuster rapidement les couleurs et accents.
 - Le GIF de fond se trouve dans `fonds/giphy.gif`. Remplace ce fichier pour changer l'arrière-plan animé.
 
-## Déploiement (rapide)
-- GitHub Pages: pousser le dépôt sur GitHub et activer Pages depuis la branche `main` (ou `master`) dans les paramètres du dépôt.
-
-## Notes & bonnes pratiques
-- Pour la production, remplace le GIF par une image optimisée ou une vidéo encodée selon les besoins de performances.
-- Si tu veux un formulaire fonctionnel, ajoute un service backend (Netlify Forms, Formspree, ou un endpoint personnalisé).
 
 ## Contact
 - Email: teztat.auguste@gmail.com
