@@ -8,9 +8,11 @@
   <link rel="icon" href="pp.png">
 </head>
 <body>
+  <div class="bg-mesh" aria-hidden="true"><span></span><span></span><span></span></div>
+
   <header>
     <nav class="container">
-      <p class="logo" >Kyllian Auguste</p>
+      <a class="logo" href="index.html">Kyllian Auguste</a>
       <ul class="nav">
         <li><a href="index.html">Accueil</a></li>
         <li><a href="projets.html">Projets</a></li>
@@ -22,14 +24,39 @@
 
   <main class="container">
     <section id="accueil" class="hero">
-      <h1>Bienvenue Sur Mon PortFolio</h1>
-      <p>Développeur FullStack en Alternance </p>
-      <p>Je suis Kyllian AUGUSTE ,  un développeur B1 Etudiant à la Coding Factory by ESIEE-IT passionné par la création de solutions innovantes et efficaces. Avec une expertise en développement web, je suis à la recherche d'expérience en millieu professionnel  .</p>
-    </section>
+      <div class="hero-grid">
+        <div class="hero-text">
+          <span class="eyebrow"><span class="dot"></span>Disponible pour une alternance</span>
+          <h1>Bienvenue Sur Mon PortFolio</h1>
+          <p>Développeur FullStack en Alternance</p>
+          <p>Je suis Kyllian AUGUSTE, un développeur B1 étudiant à la Coding Factory by ESIEE-IT, passionné par la création de solutions innovantes et efficaces. Avec une expertise en développement web, je suis à la recherche d'une expérience en milieu professionnel.</p>
+          <div class="hero-cta">
+            <a href="projets.html" class="btn">Voir mes projets</a>
+            <a href="contact.html" class="btn-outline">Me contacter</a>
+          </div>
+        </div>
 
-    
+        <div class="hero-visual">
+          <img src="pp.png" alt="Photo de Kyllian Auguste" class="hero-avatar">
+          <div class="terminal">
+            <div class="terminal-bar">
+              <span class="terminal-dot"></span>
+              <span class="terminal-dot"></span>
+              <span class="terminal-dot"></span>
+              <span class="terminal-title">kyllian.dev</span>
+            </div>
+            <div class="terminal-body" id="terminalBody" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Kyllian Auguste — Développeur FullStack</p>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
