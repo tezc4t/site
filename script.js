@@ -51,10 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
       "  role: 'Développeur FullStack',",
       "  formation: 'Coding Factory · ESIEE-IT',",
       "  stack: ['HTML', 'CSS', 'JS', 'SQL', 'PHP', 'Java', 'C#', 'Python', 'Bash', 'PowerShell'],",
-      "  recherche: 'Alternance',",
+      "  Futur Alternant,",
       "};",
       "",
-      "// statut → disponible ✔"
+      "// statut → Motivé ✔"
     ];
 
     const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
