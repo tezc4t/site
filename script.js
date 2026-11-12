@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+const init = () => {
 
   const header = document.querySelector('header');
   const onScroll = () => header?.classList.toggle('scrolled', window.scrollY > 20);
@@ -113,6 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
           for (let i = codeLines.length - 1; i >= 0; i--) {
             const text = codeLines[i];
             const lineEl = terminal.children[i];
+            if (!lineEl) continue;
             for (let j = text.length; j > 0; j--) {
               lineEl.textContent = text.substring(0, j - 1);
               await sleep(20);
@@ -125,19 +126,35 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     };
 
+    let animationStarted = false;
+    const startAnimation = () => {
+      if (animationStarted) return;
+      animationStarted = true;
+      runTerminalAnimation();
+    };
+
     if ('IntersectionObserver' in window) {
       const io = new IntersectionObserver((entries, obs) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setTimeout(runTerminalAnimation, 300);
+            startAnimation();
             obs.disconnect();
           }
         });
-      }, { threshold: 0.3 });
+      }, { threshold: 0.1 });
       io.observe(terminal);
+
+      // Fallback de sécurité au cas où l'observateur tarde ou sur petits écrans
+      setTimeout(startAnimation, 1200);
     } else {
-      runTerminalAnimation();
+      startAnimation();
     }
   }
 
-});
+};
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
