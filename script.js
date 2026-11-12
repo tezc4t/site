@@ -49,12 +49,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const codeLines = [
       "const kyllian = {",
       "  role: 'Développeur FullStack',",
+      "  status: 'Alternant chez Grimp',",
       "  formation: 'Coding Factory · ESIEE-IT',",
-      "  stack: ['HTML', 'CSS', 'JS', 'SQL', 'PHP', 'Java', 'C#', 'Python', 'Bash', 'PowerShell'],",
-      "  Futur Alternant,",
+      "  stack: ['HTML', 'CSS', 'JS', 'SQL', 'PHP', 'Java', 'C#', 'Python', 'Bash', 'PowerShell','Next.JS', 'NestJS', 'PostgreSQL'],",
       "};",
       "",
-      "// statut → Motivé ✔"
+      "// statut → Alternant ✔"
     ];
 
     const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
